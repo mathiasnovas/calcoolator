@@ -35,7 +35,7 @@ const Home: NextPage = () => {
 
     // If we have a left number and the direct flag is truthy, we can already
     // calculate the result and show it to the user. Useful for performing
-    // operations like square root, where you only need either left or right side.
+    // operations like square root, where you only need one number.
     if (state.left && direct) {
       const result = calculate(state.left, state.right ?? "0", type);
       setState({ left: result, operation: type });
@@ -143,7 +143,7 @@ const Home: NextPage = () => {
             </div>
           ) : null}
 
-          <div className="border border-gray-200 p-2 bg-pink-100 rounded shadow-lg">
+          <div className=" p-2 bg-pink-100 rounded shadow-lg border-2 border-black">
             <div className="text-center">CALCOOLATOR 2000</div>
 
             <div className="mt-2 bg-green-200 border border-green-400 px-2 text-right rounded">

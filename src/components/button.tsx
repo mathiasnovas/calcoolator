@@ -19,7 +19,7 @@ export const Button = ({
     <button
       title={title || ""}
       className={classNames(
-        "py-2 px-4 rounded shadow",
+        "overflow-hidden rounded shadow border-t-2 border-white",
         {
           "bg-orange-300": variant === "orange",
           "bg-blue-200": variant === "blue",
@@ -31,7 +31,11 @@ export const Button = ({
       )}
       onClick={onClick}
     >
-      {children}
+      <div className="overflow-hidden border-2 border-black rounded">
+        <div className="w-full h-full py-2 px-4 border-b-2 border-white border-opacity-80">
+          {children}
+        </div>
+      </div>
     </button>
   );
 };
